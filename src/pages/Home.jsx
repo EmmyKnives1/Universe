@@ -1,4 +1,4 @@
-import Particulas from "./Particulas";
+import Particulas from "../components/Particulas";
 function Home() {
   // Import the image from the same folder
 

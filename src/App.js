@@ -23,17 +23,5 @@ function App() {
     </Router>
   );
 }
-<section className="hero">
-  <div className="container">
-    <h2>Bem-vinde ao universo livre</h2>
-    <p>Um espaço para ideias, expressões e conexões que fogem do óbvio.</p>
-    <button>explorar</button>
-  </div>
-</section>
-
-
-
 
 export default App;
-
-

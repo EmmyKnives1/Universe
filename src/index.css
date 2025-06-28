@@ -1,13 +1,199 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.home-container {
+  padding: 60px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ececec;
+  background: linear-gradient(135deg, #2c003e, #462255);
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home-container h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  color: #ffcbf2;
+}
+
+.home-container p {
+  font-size: 1.3em;
+  color: #fceff9;
+  line-height: 1.6;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+.home-container h1 {
+  font-size: 2.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 600px;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #ffb3ec, #a3f7bf, #ffd6a5);
+  animation: backgroundSlide 10s infinite linear;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  color: #1b1c2e;
+  text-transform: lowercase;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* animação de fundo */
+@keyframes backgroundSlide {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
+
+/* animação sutil de flutuação */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  margin-left: 40px;
+}
+
+.nav-links a {
+  color: #fceff9;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffd6a5;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd6a5;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1c2e; /* cor de fundo (pode trocar pela da sua paleta!) */
+  color: #fceff9;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+a {
+  color: #ffd6a5;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #a3f7bf;
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffb3ec;
+}
+
+button {
+  background-color: #ffd6a5;
+  color: #1b1c2e;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a3f7bf;
+  transform: scale(1.05);
+}
+.navbar {
+  background: linear-gradient(270deg, #ffb3ec, #a3f7bf, #ffd6a5, #b3caff);
+  background-size: 800% 800%;
+  animation: auroraFlow 12s ease infinite;
+  /* ... mantenha os outros estilos que já estão funcionando */
+}
+@keyframes auroraFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #ffb3ec;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  color: #fceff9;
+  line-height: 1.6;
 }

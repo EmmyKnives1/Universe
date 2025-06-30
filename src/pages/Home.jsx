@@ -1,39 +1,50 @@
+import React, { useState } from 'react';
 
-function Home() {
-  // Import the image from the same folder
+
+const Home = () => {
+  const [mostrarGaleria, setMostrarGaleria] = useState(false);
 
   return (
-    <div className="home-container">
-      <section className="entrada">
-        <div className="overlay">
-          <h1>Bem-vindo ao universo livre</h1>
-          <p>um espaço onde sentir, criar e existir são a mesma coisa.</p>
-          <div className="nevoa"></div>
-            <div className="nevoa" style={{animationDelay: '10s', opacity: 0.25}}></div>
-        </div>
+    <>
+      <title>Universo Livre</title>
+      <meta name="description" content="Um espaço onde sentir, criar e existir são a mesma coisa." />
 
+      <div className="home-container">
+        <section className="entrada">
+          <div className="overlay">
+            <h1>Bem-vindo ao universo livre</h1>
+            <p>um espaço onde sentir, criar e existir são a mesma coisa.</p>
 
-        <div>
-          <section className="entrada">
-        <div className="overlay">
-  <h1>...</h1>
+            <button className="entrar" onClick={() => setMostrarGaleria(true)}>
+              entrar na galeria
+            </button>
 
-  <button className="entrar">entrar na galeria</button>
-</div>
+            <div className="nevoa" />
+            <div className="nevoa" style={{ animationDelay: '10s', opacity: 0.25 }} />
+          </div>
 
-      </section>
-          <img src={require('./brilhar.png')} className="flores" alt="brilhar" />
-          <img src={require('./brilhar.png')} className="estrelas" alt="estrelas flutuantes" />
-        </div>
-      </section>
-    </div>
+          <img
+            src={require('./brilhar.png')}
+            className="flores"
+            alt="brilhar"
+          />
+          <img
+            src={require('./brilhar.png')}
+            className="estrelas"
+            alt="estrelas flutuantes"
+          />
+        </section>
+
+        {mostrarGaleria && (
+          <section className="galeria fadeIn">
+            <h2>🌸 Galeria Encantada 🌸</h2>
+            <p>Você desbloqueou o universo visual!</p>
+            {/* Cards, imagens, animações podem ir aqui */}
+          </section>
+        )}
+      </div>
+    </>
   );
-}
-
-
-
-
-
-
+};
 
 export default Home;

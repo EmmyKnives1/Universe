@@ -11,17 +11,13 @@ function Home() {
           <div className="nevoa"></div>
             <div className="nevoa" style={{animationDelay: '10s', opacity: 0.25}}></div>
         </div>
-
-
         <div>
           <section className="entrada">
-        <div className="overlay">
-  <h1>...</h1>
-
-  <button className="entrar">entrar na galeria</button>
-</div>
-
-      </section>
+            <div className="overlay">
+              <h1>...</h1>
+              <button className="entrar">entrar na galeria</button>
+            </div>
+          </section>
           <img src={require('./brilhar.png')} className="flores" alt="brilhar" />
           <img src={require('./brilhar.png')} className="estrelas" alt="estrelas flutuantes" />
         </div>

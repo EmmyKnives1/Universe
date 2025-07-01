@@ -1,5 +1,4 @@
-import React from 'react';
-import GaleriaGrid from '../components/GaleriaGrid'; // caminho pode mudar dependendo da sua estrutura
+import GaleriaGrid from '../components/GaleriaGrid/GaleriaGrid'; // caminho pode mudar dependendo da sua estrutura
 
 const Gallery = () => {
   return (

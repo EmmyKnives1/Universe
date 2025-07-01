@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Home.css';
 
 const Home = () => {
   const [mostrarGaleria, setMostrarGaleria] = useState(false);
@@ -24,12 +24,12 @@ const Home = () => {
           </div>
 
           <img
-            src={require('./brilhar.png')}
+            src={require('../brilhar.png')}
             className="flores"
             alt="brilhar"
           />
           <img
-            src={require('./brilhar.png')}
+            src={require('../brilhar.png')}
             className="estrelas"
             alt="estrelas flutuantes"
           />

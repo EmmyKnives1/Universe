@@ -15,7 +15,7 @@ const Home = () => {
             <h1>Bem-vindo ao universo livre</h1>
             <p>um espaço onde sentir, criar e existir são a mesma coisa.</p>
 
-            <button className="entrar" onClick={() => setMostrarGaleria(true)}>
+            <button className="entrar" onClick={() => setMostrarGaleria(!mostrarGaleria)}>
               entrar na galeria
             </button>
 

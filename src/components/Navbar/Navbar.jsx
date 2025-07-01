@@ -18,14 +18,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-<div className="navbar">
-  <h1>universo livre</h1>
-  <div className="nav-links">
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/galeria">Galeria</a>
-    <a href="/sobre">Sobre</a>
-    <a href="/contato">Contato</a>
-  </div>
-</div>

@@ -9,9 +9,9 @@ import Starfield from '../../components/Starfield';  // 1) import
    return (
      <>
      <Starfield />
--      <title>Universo Livre</title>
-+      {/* 2) Céu animado por trás de tudo */}
-+      
+      <title>Universo Livre</title>
+      {/* 2) Céu animado por trás de tudo */}
+      
 
        <title>Universo Livre</title>
        <meta

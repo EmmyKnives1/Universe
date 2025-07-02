@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
-import Starfield from '../../components/Starfield';  // 1) import
+import Starfield from '../../components/StarfieldCanvas';  // 1) import
 
 
  const Home = () => {

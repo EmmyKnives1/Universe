@@ -1,0 +1,122 @@
+.perfil-container {
+  position: relative;
+  padding: 120px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.perfil-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #fcbff2;
+  box-shadow: 0 0 18px rgba(251, 194, 235, 0.3);
+  object-fit: cover;
+}
+
+.nome {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: #ffd6a5;
+}
+
+.bio {
+  font-size: 1rem;
+  max-width: 600px;
+  opacity: 0.85;
+  color: #fceff9;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.botao-editar {
+  background: none;
+  color: #fcbff2;
+  border: 1px solid #fcbff2;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-top: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-editar:hover {
+  background-color: rgba(255, 214, 165, 0.06);
+  transform: scale(1.03);
+}
+
+.grid-postagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  z-index: 2;
+}
+
+.card-postagem {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(179, 122, 243, 0.1);
+  text-align: center;
+}
+
+.card-postagem:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 24px rgba(179, 122, 243, 0.25);
+}
+
+.card-postagem img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.card-postagem h3 {
+  font-size: 1.1rem;
+  color: #ffcbf2;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Fundo estelar */
+.fundo-estrelado {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Nebulosa suave */
+.nebulosa {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(179,122,243,0.15), transparent 70%);
+  z-index: 0;
+  filter: blur(80px);
+  pointer-events: none;
+}

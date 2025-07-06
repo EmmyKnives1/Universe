@@ -1,5 +1,5 @@
 // src/components/GaleriaEncantada.jsx
-import React from 'react';
+
 import './GaleriaEncantada.css';
 
 
@@ -39,7 +39,7 @@ const obras = [
 export default function GaleriaEncantada() {
   return (
     <section className="galeria-encantada">
-      <h2>🌸 Galeria Encantada 🌸</h2>
+      <h2> Galeria Encantada </h2>
       <p className="galeria-descricao">
         Obras que flutuam entre o sentir e o imaginar.
       </p>

@@ -10,7 +10,7 @@ function Navbar() {
         <li><Link to="/sobre">Sobre</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/galeria">Galeria</Link></li>
-        <li><Link to="/eventos">Eventos</Link></li>
+        <li><Link to="/Perfil">Perfil</Link></li>
         <li><Link to="/contato">Contato</Link></li>
       </ul>
     </nav>

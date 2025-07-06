@@ -91,11 +91,18 @@
 }
 
 /* -------------------- BOTÃO -------------------- */
+.botoes-entrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* espaço entre os dois */
+}
+
+
 .entrar {
   padding: 14px 32px;
-  margin-top: 40px;
   border: 1px solid #ffd6a5;
-  color: #ffd6a5;
+  color: #f7ddbd;
   background-color: transparent;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
@@ -113,10 +120,27 @@
   transform: scale(1.03);
 }
 
-@keyframes pulsar {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.75; }
+.botao-cadastro {
+  background: none;
+  text-decoration: underline;
+  border: none;
+  color: #fae2c5;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  padding: 4px 0;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
 }
+
+.botao-cadastro:hover {
+  opacity: 0.85;
+  border-color: #fcbff2;
+  transform: translateY(-1px);
+}
+
 
 /* -------------------- NÉVOA -------------------- */
 .nevoa {
@@ -208,7 +232,7 @@ button {
 }
 
 button:hover {
-  background-color: #a3f7bf;
+  background-color: #a3f7bf00;
   transform: scale(1.05);
 }
 

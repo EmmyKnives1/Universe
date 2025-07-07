@@ -52,6 +52,11 @@
   object-fit: cover;
   margin-bottom: 16px;
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+.card-obra img:hover {
+  transform: scale(1.03);
 }
 
 .card-obra h3 {
@@ -68,12 +73,51 @@
   line-height: 1.5;
 }
 
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.imagem-ampliada {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 14px;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+}
+
+.fechar {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.fechar:hover {
+  opacity: 0.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 @keyframes aparecer {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .fundo-estrelado {
   position: fixed;
   inset: 0;

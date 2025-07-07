@@ -9,6 +9,9 @@ import Starfield from '../../components/StarfieldCanvas';  // 1) import
    return (
      <>
      <Starfield />
+  
+
+
       <title>Universo Livre</title>
       {/* 2) Céu animado por trás de tudo */}
       
@@ -37,12 +40,8 @@ import Starfield from '../../components/StarfieldCanvas';  // 1) import
              />
            </div>
 
-           <img src={require('../brilhar.png')} className="flores" alt="brilhar" />
-           <img
-             src={require('../brilhar.png')}
-             className="estrelas"
-             alt="estrelas flutuantes"
-           />
+           
+             
          </section>
 
          

@@ -8,11 +8,12 @@
 body {
   background: linear-gradient(270deg, #1b1c2e, #262742, #1b1c2e, #2d2f47);
   background-size: 600% 600%;
-  
+  height: 100vh;
   color: #fceff9;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  
 }
 
 @keyframes fundoVivo {

@@ -63,7 +63,7 @@ export default function Sobre() {
             <code>Feed.jsx</code>, <code>PostCard.jsx</code>,{' '}
             <code>PerfilUsuario.jsx</code>, <code>PostForm.jsx</code>. A
             navegação é feita via React Router, e o estado global (autenticação,
-            dados de usuário) é gerenciado com Context API e Firebase.
+            dados de usuário) é gerenciado com Context API e Sequelize.
           </p>
         </section>
 
@@ -85,12 +85,12 @@ export default function Sobre() {
               </tr>
               <tr>
                 <td>Autenticação</td>
-                <td>Firebase Auth / Auth0</td>
-                <td>Login e registro social/email</td>
+                <td>Passport.js / Auth0 / JWT</td>
+                <td>Login e registro social/email, integrado a Sequelize</td>
               </tr>
               <tr>
                 <td>Banco de Dados</td>
-                <td>Firestore / PostgreSQL</td>
+                <td>PostgreSQL (via Sequelize)</td>
                 <td>Usuários, posts, categorias, relações</td>
               </tr>
               <tr>
@@ -105,7 +105,7 @@ export default function Sobre() {
               </tr>
               <tr>
                 <td>Serverless</td>
-                <td>Firebase Functions / AWS Lambda</td>
+                <td>AWS Lambda / Firebase Functions (opcional)</td>
                 <td>Moderação de posts e notificações</td>
               </tr>
             </tbody>

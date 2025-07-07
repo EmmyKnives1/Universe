@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({ ocultar }) {
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${ocultar ? 'oculta' : ''}`}>
       <div className="logo">✨ universo livre</div>
       <ul className="nav-links">
         <li><Link to="/">Início</Link></li>

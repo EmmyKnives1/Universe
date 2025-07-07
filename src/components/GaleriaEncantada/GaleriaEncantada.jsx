@@ -1,6 +1,6 @@
-// src/components/GaleriaEncantada.jsx
-
+import { useState, useEffect } from 'react';
 import './GaleriaEncantada.css';
+import StarfieldCanvas from '../../components/StarfieldCanvas'; // ajuste o caminho conforme a estrutura
 
 
 const obras = [
@@ -36,23 +36,58 @@ const obras = [
   },
 ];
 
-export default function GaleriaEncantada() {
-  return (
-    <section className="galeria-encantada">
-      <h2> Galeria Encantada </h2>
-      <p className="galeria-descricao">
-        Obras que flutuam entre o sentir e o imaginar.
-      </p>
+export default function GaleriaEncantada({ onLightbox }) {
+  const [imagemAmpliada, setImagemAmpliada] = useState(null);
 
-      <div className="grid-galeria">
-        {obras.map((obra, index) => (
-          <div className="card-obra" key={index}>
-            <img src={obra.imagem} alt={obra.titulo} />
-            <h3>{obra.titulo}</h3>
-            <p>{obra.descricao}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+  // Comunica a visibilidade da navbar com base na lightbox
+  useEffect(() => {
+    <>
+  <StarfieldCanvas />
+
+  <div className="galeria-container">
+    {/* Seu conteúdo da galeria aqui */}
+  </div>
+</>
+
+    if (onLightbox) {
+      onLightbox(!imagemAmpliada); // false = esconder navbar, true = mostrar
+    }
+  }, [imagemAmpliada, onLightbox]);
+
+  return (
+    <>
+      <section className="galeria-encantada">
+        <h2> Galeria Encantada </h2>
+        <p className="galeria-descricao">
+          Obras que flutuam entre o sentir e o imaginar.
+        </p>
+
+        <div className="grid-galeria">
+          {obras.map((obra, index) => (
+            <div className="card-obra" key={index}>
+              <img
+                src={obra.imagem}
+                alt={obra.titulo}
+                onClick={() => setImagemAmpliada(obra)}
+                className="miniatura"
+              />
+              <h3>{obra.titulo}</h3>
+              <p>{obra.descricao}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {imagemAmpliada && (
+        <div className="lightbox" onClick={() => setImagemAmpliada(null)}>
+          <img
+            src={imagemAmpliada.imagem}
+            alt={imagemAmpliada.titulo}
+            className="imagem-ampliada"
+          />
+          <span className="fechar">✕</span>
+        </div>
+      )}
+    </>
   );
 }

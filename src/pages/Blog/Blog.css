@@ -1,0 +1,155 @@
+:root {
+  --rosa: #F8D1E9;
+  --pessego: #FFD6A5;
+  --amarelo: #FFF8A2;
+  --menta: #B5FFC3;
+  --azul-bebe: #B5E8FF;
+  --lavanda: #E1C8FF;
+  --fundo: #0D0E11;
+  --texto: #F3E8FF;
+}
+
+.blog-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+  color: var(--texto);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-header h1 {
+  font-size: 2.8rem;
+  color: var(--pessego);
+  margin-bottom: 8px;
+}
+
+.blog-header p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.blog-content {
+  display: flex;
+  gap: 32px;
+}
+
+.blog-sidebar {
+  flex: 0 0 260px;
+  position: sticky;
+  top: 140px;
+}
+
+.busca {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--texto);
+}
+
+.busca::placeholder {
+  color: rgba(243, 232, 255, 0.6);
+}
+
+.lista-categorias {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-categorias li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lista-categorias li:hover {
+  color: var(--pessego);
+}
+
+.blog-posts {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.card-post {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(179, 122, 243, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(179, 122, 243, 0.2);
+}
+
+.card-post .tag {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+  background: var(--lavanda);
+  color: var(--fundo);
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.card-post h2 {
+  font-size: 1.4rem;
+  margin: 8px 0;
+  color: var(--amarelo);
+}
+
+.card-post .meta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.card-post .excerpt {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.leia-mais {
+  background: none;
+  border: none;
+  color: var(--pessego);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.leia-mais:hover {
+  color: var(--lavanda);
+  transform: translateX(4px);
+}
+
+.blog-footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* Fundo estrelado animado via StarfieldCanvas */
+.fundo-estrelado {
+  background: radial-gradient(ellipse at bottom, #090a0f 0%, #0d0e11 100%);
+}

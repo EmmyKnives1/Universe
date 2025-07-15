@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './GaleriaEncantada.css';
-import StarfieldCanvas from '../../components/StarfieldCanvas'; // ajuste o caminho conforme a estrutura
-
+import StarfieldCanvas from '../../components/StarfieldCanvas';
 
 const obras = [
   {
@@ -34,30 +33,34 @@ const obras = [
     descricao: 'Experimento digital com luz e sombra.',
     imagem: '/imagens/aura-partida.jpg',
   },
+  {
+    titulo: 'Linha Cósmica',
+    descricao: 'Tinta suspensa entre dois silêncios.',
+    imagem: '/imagens/linha-cosmica.jpg',
+  },
+  {
+    titulo: 'Eco Nebuloso',
+    descricao: 'Sombra digital bordada de luz lilás.',
+    imagem: '/imagens/eco-nebuloso.jpg',
+  },
 ];
 
 export default function GaleriaEncantada({ onLightbox }) {
   const [imagemAmpliada, setImagemAmpliada] = useState(null);
 
-  // Comunica a visibilidade da navbar com base na lightbox
+  // Controla a visibilidade da navbar
   useEffect(() => {
-    <>
-  <StarfieldCanvas />
-
-  <div className="galeria-container">
-    {/* Seu conteúdo da galeria aqui */}
-  </div>
-</>
-
     if (onLightbox) {
-      onLightbox(!imagemAmpliada); // false = esconder navbar, true = mostrar
+      onLightbox(!imagemAmpliada);
     }
   }, [imagemAmpliada, onLightbox]);
 
   return (
     <>
+      <StarfieldCanvas /> {/* ⬅️ Aqui está nosso fundo brilhante */}
+
       <section className="galeria-encantada">
-        <h2> Galeria Encantada </h2>
+        <h2>Galeria Encantada</h2>
         <p className="galeria-descricao">
           Obras que flutuam entre o sentir e o imaginar.
         </p>

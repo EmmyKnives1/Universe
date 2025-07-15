@@ -7,7 +7,6 @@ function Navbar({ ocultar }) {
       <div className="logo">✨ universo livre</div>
       <ul className="nav-links">
         <li><Link to="/">Início</Link></li>
-        <li><Link to="/sobre">Sobre</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/galeria">Galeria</Link></li>
         <li><Link to="/Perfil">Perfil</Link></li>

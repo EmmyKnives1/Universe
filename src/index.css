@@ -10,7 +10,7 @@ body {
   background-size: 600% 600%;
   height: 100vh;
   color: #fceff9;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   
@@ -21,6 +21,11 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
 
 
 

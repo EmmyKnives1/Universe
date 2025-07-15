@@ -5,6 +5,7 @@ import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
 import Gallery from './components/GaleriaEncantada/GaleriaEncantada';
 import Perfil from './pages/Perfil/Perfil';
+import Login from './pages/Login/Login';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar/Navbar';
 
@@ -16,12 +17,13 @@ function App() {
       <Navbar ocultar={!mostrarNavbar} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
         <Route
           path="/galeria"
           element={<Gallery onLightbox={setMostrarNavbar} />}
         />
+        <Route path="/about" element={<About />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/contato" element={<Contact />} />
       </Routes>

@@ -1,3 +1,11 @@
+/* -------------------- RESET DE BASE -------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* -------------------- CONTAINER PRINCIPAL -------------------- */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -5,17 +13,16 @@
   justify-content: center;
   text-align: center;
   padding: 60px 40px;
-  min-height: 100vh;
-  height: 80vh;
+  height: 69vh;
   font-family: 'Segoe UI', 'Cormorant Garamond', serif, sans-serif;
   background-color: transparent;
   color: #ececec;
-  overflow: hidden;
   position: relative;
-  margin: 0 auto;
+  overflow: hidden;
+  
 }
 
-
+/* -------------------- TEXTO PRINCIPAL -------------------- */
 .home-container h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
@@ -30,9 +37,9 @@
   color: #fceff9;
 }
 
+/* -------------------- OVERLAY ANIMADA -------------------- */
 .overlay {
   position: relative;
-  margin: 0 auto;
   z-index: 2;
   text-align: center;
   padding: 20px;
@@ -49,40 +56,6 @@
 }
 
 .overlay h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #ffd6a5;
-  margin-bottom: 16px;
-}
-
-.overlay p {
-  font-size: 1.1rem;
-  color: #fceff9;
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-/* -------------------- ENTRADA -------------------- */
-
-
-.overlay {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 0 20px;
-  animation: surgir 1.4s ease-in-out forwards;
-  opacity: 0;
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-@keyframes surgir {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.overlay h1 {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: #ffd6a5;
   margin-bottom: 16px;
@@ -95,14 +68,13 @@
   margin: 0 auto 40px;
 }
 
-/* -------------------- BOTÃO -------------------- */
+/* -------------------- BOTÕES -------------------- */
 .botoes-entrada {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px; /* espaço entre os dois */
+  gap: 5px;
 }
-
 
 .entrar {
   padding: 14px 32px;
@@ -146,14 +118,13 @@
   transform: translateY(-1px);
 }
 
-
-/* -------------------- NÉVOA -------------------- */
+/* -------------------- NÉVOA FLUTUANTE -------------------- */
 .nevoa {
   position: absolute;
-  top: -20%;
-  left: -20%;
-  width: 160%;
-  height: 160%;
+  top: -10%;
+  left: 3%;
+  width: 100%;
+  height: 100%;
   background:
     radial-gradient(circle at 30% 30%, #ffb3ec55 0%, transparent 60%),
     radial-gradient(circle at 70% 70%, #a3f7bf44 0%, transparent 60%),
@@ -161,7 +132,7 @@
     radial-gradient(circle at 40% 60%, #ffd6a577 0%, transparent 70%);
   animation: moverNevoa 40s ease-in-out infinite;
   opacity: 0.15;
-  filter: blur(80px);
+  filter: blur(70px);
   z-index: 0;
   pointer-events: none;
 }
@@ -172,10 +143,7 @@
   100% { transform: translate(0, 0); }
 }
 
-/* -------------------- ELEMENTOS FLUTUANTES -------------------- */
-
-
-/* -------------------- TEXTOS, LINKS, TIPOGRAFIA -------------------- */
+/* -------------------- TIPOGRAFIA GLOBAL -------------------- */
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -194,6 +162,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* -------------------- BOTÃO GLOBAL -------------------- */
 button {
   background-color: #ffd6a5;
   color: #1b1c2e;
@@ -211,54 +180,17 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* -------------------- HERO -------------------- */
-.hero {
-  padding: 80px 20px;
-  text-align: center;
+/* -------------------- FOOTER -------------------- */
+.footer-site {
+  display: flex;
+  padding: 40px 20px;
+  justify-content: flex-end;
+  margin-right: 30px;
+  font-size: 0.95rem;
+  font-family: 'Cormorant Garamond', serif;
+  z-index: 5;
+  position: relative;
+  margin-top: 7.1rem;
 }
-
-.hero h2 {
-  font-size: 2.4rem;
-  color: #ffb3ec;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 24px;
-  color: #fceff9;
-}
-
-/* -------------------- Estrelinhas (não utilizadas no momento)-------------------- */
-
-.estrela-cursor {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%) rotate(0deg);
-  animation: dissiparBrilho 1.5s ease-out forwards;
-  z-index: 9999;
-  mix-blend-mode: screen;
-}
-
-@keyframes dissiparBrilho {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    filter: blur(0);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -80%) scale(0.4) rotate(120deg);
-    filter: blur(3px);
-  }
-}
-/*------------------- teste -------------------*/
-
-/* ---------------- céu estrelado ---------------- */
-
-
-
 
 
